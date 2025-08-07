@@ -1,0 +1,223 @@
+.contact {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Center the section subtitle */
+.contact .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-100);
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: var(--neutral-200);
+}
+
+.social-links h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-100);
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-500);
+}
+
+.social-link:nth-child(1)::before {
+  background: var(--secondary-500);
+}
+
+.social-link:nth-child(2)::before {
+  background: var(--accent-500);
+}
+
+.social-link:nth-child(3)::before {
+  background: var(--warning-500);
+}
+
+.social-link:nth-child(4)::before {
+  background: var(--success-500);
+}
+
+.social-link:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--secondary-300);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--primary-400);
+}
+
+.social-link:nth-child(1) .social-icon {
+  color: var(--secondary-400);
+}
+
+.social-link:nth-child(2) .social-icon {
+  color: var(--accent-400);
+}
+
+.social-link:nth-child(3) .social-icon {
+  color: var(--warning-400);
+}
+
+.social-link:nth-child(4) .social-icon {
+  color: var(--success-400);
+}
+
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-400), var(--accent-400));
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--neutral-100);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-400);
+  box-shadow: 0 0 0 2px rgba(49, 151, 149, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success-message {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--success);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+} 

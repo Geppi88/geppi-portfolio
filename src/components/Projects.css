@@ -1,0 +1,362 @@
+.projects {
+  padding: 100px 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Center the section subtitle */
+.projects .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: linear-gradient(45deg, var(--primary-500), var(--primary-700));
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* Different colors for different filter categories */
+.filter-btn:nth-child(2):hover,
+.filter-btn:nth-child(2).active {
+  background: linear-gradient(45deg, var(--secondary-500), var(--secondary-700));
+}
+
+.filter-btn:nth-child(3):hover,
+.filter-btn:nth-child(3).active {
+  background: linear-gradient(45deg, var(--accent-500), var(--accent-700));
+}
+
+.filter-btn:nth-child(4):hover,
+.filter-btn:nth-child(4).active {
+  background: linear-gradient(45deg, var(--warning-500), var(--warning-700));
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-500);
+  z-index: 1;
+}
+
+.project-card:nth-child(3n+1)::before {
+  background: var(--secondary-500);
+}
+
+.project-card:nth-child(3n+2)::before {
+  background: var(--accent-500);
+}
+
+.project-card:nth-child(3n+3)::before {
+  background: var(--warning-500);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary-300);
+}
+
+.project-thumbnail {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-thumbnail img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(102, 126, 234, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:nth-child(3n+1) .project-overlay {
+  background: rgba(49, 151, 149, 0.9);
+}
+
+.project-card:nth-child(3n+2) .project-overlay {
+  background: rgba(229, 62, 62, 0.9);
+}
+
+.project-card:nth-child(3n+3) .project-overlay {
+  background: rgba(245, 158, 11, 0.9);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.project-link svg {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-link span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--neutral-100);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  color: var(--neutral-200);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.project-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-tag:hover {
+  background: var(--secondary-400);
+  transform: translateY(-1px);
+}
+
+/* Different colors for different tag types */
+.project-tag:nth-child(3n+1) {
+  background: rgba(49, 151, 149, 0.3);
+  border: 1px solid rgba(49, 151, 149, 0.5);
+}
+
+.project-tag:nth-child(3n+2) {
+  background: rgba(229, 62, 62, 0.3);
+  border: 1px solid rgba(229, 62, 62, 0.5);
+}
+
+.project-tag:nth-child(3n+3) {
+  background: rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-card {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Resume Modal */
+.resume-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.resume-modal {
+  background: white;
+  border-radius: 15px;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 800px;
+  animation: slideIn 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.resume-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(45deg, var(--primary-500), var(--primary-700));
+  color: white;
+}
+
+.resume-modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.resume-modal-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.resume-modal-content {
+  padding: 0;
+  height: 600px;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+  .resume-modal {
+    width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .resume-modal-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .resume-modal-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .resume-modal-content {
+    height: 500px;
+  }
+} 

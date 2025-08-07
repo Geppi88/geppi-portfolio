@@ -1,0 +1,429 @@
+.about {
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Center the section subtitle with the carousel */
+.about .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Carousel Container */
+.carousel-container {
+  margin-top: 2rem;
+  position: relative;
+}
+
+/* Navigation Dots */
+.carousel-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-dot {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--neutral-200);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav-dot:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--neutral-100);
+  transform: translateY(-2px);
+}
+
+.nav-dot.active {
+  background: linear-gradient(45deg, var(--primary-500), var(--primary-700));
+  border-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Content */
+.carousel-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--neutral-100);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--primary-500);
+  border-color: var(--primary-500);
+  color: white;
+  transform: scale(1.1);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-400), var(--accent-400));
+}
+
+.slide-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-100);
+  text-align: center;
+}
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Journey Content */
+.journey-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.journey-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-200);
+  text-align: center;
+}
+
+.journey-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary-300);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-300);
+  margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+  font-size: 0.9rem;
+  color: var(--neutral-200);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Strengths Content */
+.strengths-content {
+  width: 100%;
+}
+
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.strength-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-500);
+}
+
+.strength-card:nth-child(1)::before {
+  background: var(--secondary-500);
+}
+
+.strength-card:nth-child(2)::before {
+  background: var(--accent-500);
+}
+
+.strength-card:nth-child(3)::before {
+  background: var(--warning-500);
+}
+
+.strength-card:nth-child(4)::before {
+  background: var(--success-500);
+}
+
+.strength-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--secondary-300);
+}
+
+.strength-icon {
+  font-size: 2.5rem;
+  color: var(--primary-500);
+  margin-bottom: 1rem;
+}
+
+.strength-card:nth-child(1) .strength-icon {
+  color: var(--secondary-400);
+}
+
+.strength-card:nth-child(2) .strength-icon {
+  color: var(--accent-400);
+}
+
+.strength-card:nth-child(3) .strength-icon {
+  color: var(--warning-400);
+}
+
+.strength-card:nth-child(4) .strength-icon {
+  color: var(--success-400);
+}
+
+.strength-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-100);
+}
+
+.strength-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--neutral-200);
+}
+
+/* Skills Content */
+.skills-content {
+  width: 100%;
+}
+
+.skills-intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--neutral-200);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: var(--secondary-300);
+  transform: translateX(5px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--neutral-100);
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  color: var(--neutral-300);
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-500), var(--primary-700));
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+/* Different colors for different skill categories */
+.skill-item:nth-child(3n+1) .skill-progress {
+  background: linear-gradient(45deg, var(--secondary-500), var(--secondary-700));
+}
+
+.skill-item:nth-child(3n+2) .skill-progress {
+  background: linear-gradient(45deg, var(--accent-500), var(--accent-700));
+}
+
+.skill-item:nth-child(3n+3) .skill-progress {
+  background: linear-gradient(45deg, var(--warning-500), var(--warning-700));
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.indicator.active {
+  background: var(--primary-500);
+  transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-slide {
+    padding: 1.5rem;
+    min-height: 350px;
+  }
+
+  .slide-title {
+    font-size: 1.5rem;
+  }
+
+  .journey-highlights {
+    gap: 1rem;
+  }
+
+  .highlight-item {
+    min-width: 100px;
+    padding: 1rem;
+  }
+
+  .highlight-number {
+    font-size: 2rem;
+  }
+
+  .strengths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-dot {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .carousel-navigation {
+    gap: 0.5rem;
+  }
+} 
