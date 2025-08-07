@@ -1,6 +1,6 @@
 # Geppi Iaia - Product Manager Portfolio
 
-A modern, interactive portfolio website showcasing Geppi's product management experience, projects, and skills. Built with React and Vite for optimal performance and developer experience.
+A modern, interactive portfolio website showcasing Geppi's product management experience, projects, and skills. Built with React and Vite for optimal performance and developer experience. Preview here: https://jam.dev/c/ac4210c7-0119-4514-bfb1-bb517ae10ca9
 
 ## 🚀 Features
 
