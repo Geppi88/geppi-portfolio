@@ -50,6 +50,7 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-logo">
+          <img src="/images/logo.png" alt="Geppi Iaia Logo" className="nav-logo-img" />
           <span>Geppi Iaia</span>
         </div>
 

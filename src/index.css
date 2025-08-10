@@ -1,3 +1,21 @@
+/* Forum Font Import */
+@font-face {
+  font-family: 'Forum';
+  src: url('/Forum-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Forum font to headers and buttons/CTAs only */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Forum', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+button, .btn, .cta {
+  font-family: 'Forum', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

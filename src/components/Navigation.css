@@ -25,6 +25,15 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
 }
 
 .nav-menu {
